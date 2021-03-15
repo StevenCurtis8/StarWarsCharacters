@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+img {
+  width: 400px;
+  object-fit: contain;
+}
+
+body {
+  margin: 10px;
+  animation: colorchange 175s linear 1s infinite; /* animation-name followed by duration in seconds*/
+     /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 175s linear 0s infinite alternate; /* Chrome and Safari */
+}
+
+@keyframes colorchange
+{
+  0%   {background: red; color: white;}
+  33%  {background: green; color: white;}
+  66%  {background: blue; color: white;}
+  100% {background: red; color: white;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: red; color: white;}
+  33%  {background: green; color: white;}
+  66%  {background: blue; color: white;}
+  100% {background: red; color: white;}
+}
